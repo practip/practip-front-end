@@ -7,6 +7,9 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('instrument-slug', { path: '/instrument-slug' }, function() {
+    this.route('challenge-id');
+  })
 });
 
 export default Router;

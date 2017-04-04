@@ -1,5 +1,17 @@
+$m-gutter: 1rem;
+
 @import "ember-bootstrap/bootstrap";
+
+.section {
+  padding: $m-gutter;
+}
 
 .container {
   max-width: 100rem;
+}
+
+.row__item {
+  flex-basis: calc(100% / 5 - $m-gutter - $m-gutter);
+  flex-grow: 1;
+  margin: $m-gutter;
 }
