@@ -8,7 +8,7 @@ const Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('challenge', function() {
-    this.route('create');
+    this.route('new');
     this.route('edit');
     this.route('video');
   });
