@@ -1,0 +1,8 @@
+<h1>Instruments</h1>
+{{#each model as |instrument|}}
+  <p>
+    {{#link-to 'instrument.challenge' instrument}}
+      {{instrument.title}}
+    {{/link-to}}
+  </p>
+{{/each}}

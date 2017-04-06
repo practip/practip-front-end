@@ -282,9 +282,9 @@ ast-types@0.8.12:
   version "0.8.12"
   resolved "https://registry.yarnpkg.com/ast-types/-/ast-types-0.8.12.tgz#a0d90e4351bb887716c83fd637ebf818af4adfcc"
 
-ast-types@0.9.10:
-  version "0.9.10"
-  resolved "https://registry.yarnpkg.com/ast-types/-/ast-types-0.9.10.tgz#4472a8508726269562c766307133e0d4ed7ada52"
+ast-types@0.9.11:
+  version "0.9.11"
+  resolved "https://registry.yarnpkg.com/ast-types/-/ast-types-0.9.11.tgz#371177bb59232ff5ceaa1d09ee5cad705b1a5aa9"
 
 ast-types@0.9.6:
   version "0.9.6"
@@ -4841,10 +4841,10 @@ recast@^0.11.17, recast@^0.11.3:
     source-map "~0.5.0"
 
 recast@^0.12.0:
-  version "0.12.2"
-  resolved "https://registry.yarnpkg.com/recast/-/recast-0.12.2.tgz#1743e73ca75475bf8fc8e67a8a866703209e24fd"
+  version "0.12.3"
+  resolved "https://registry.yarnpkg.com/recast/-/recast-0.12.3.tgz#ce39d41911ea56d69701216d61e350a4d9505d4d"
   dependencies:
-    ast-types "0.9.10"
+    ast-types "0.9.11"
     core-js "^2.4.1"
     esprima "~3.1.0"
     private "~0.1.5"
