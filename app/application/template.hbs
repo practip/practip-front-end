@@ -1,13 +1,15 @@
 <nav class="navbar navbar-default">
   <div class="container-fluid container">
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <a class="navbar-brand" href="#">Practip</a>
+      <a class="navbar-brand" href="#">
+        {{#link-to "dashboard"}}Home{{/link-to}}
+      </a>
       <ul class="nav navbar-nav navbar-right">
         <li>
-          {{#link-to 'index'}}Register{{/link-to}}
+          {{#link-to "user-profile"}}Profile{{/link-to}}
         </li>
         <li>
-          {{#link-to 'index'}}Login{{/link-to}}
+          {{#link-to "login"}}Sign Out{{/link-to}}
         </li>
       </ul>
     </div>
