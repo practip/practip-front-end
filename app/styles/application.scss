@@ -1,0 +1,32 @@
+.banner {
+  padding: $m-gutter;
+  background: $c-white;
+  color: $c-black;
+
+  &__navbar {
+    margin: 0 ($m-gutter * 2);
+  }
+}
+
+.navlist {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+
+  &__item {
+    margin: 0.5rem $m-gutter;
+    padding: $m-gutter;
+  }
+}
+
+.footer {
+  padding: $m-gutter;
+  text-align: center;
+}
+
+.copyright {
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
