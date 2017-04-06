@@ -1,17 +1,20 @@
-<nav class="navbar">
-  <div class="">
-    <a class="navbar-brand" href="#">
-      {{#link-to "dashboard"}}Home{{/link-to}}
-    </a>
-    <ul class="navbar__right">
-      <li>
-        {{#link-to "user-profile"}}Profile{{/link-to}}
-      </li>
-      <li>
-        {{#link-to "login"}}Sign Out{{/link-to}}
-      </li>
-    </ul>
-  </div>
-</nav>
+<header class="banner">
+  <nav class="banner__navbar">
+    <div class="navlist navlist__left">
+      <h3 class="navlist__brand" href="#">
+        {{#link-to "instrument"}}Home{{/link-to}}
+      </h3>
+      <ul class="navlist navlist__right">
+        <li class="navlist__item">
+          {{#link-to "user-profile"}}Profile{{/link-to}}
+        </li>
+        <li class="navlist__item">
+          {{#link-to "login"}}Sign Out{{/link-to}}
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+<link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
 
 {{outlet}}

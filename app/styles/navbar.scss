@@ -1,6 +1,32 @@
-.navbar {
+.banner {
+  padding: $m-gutter;
+  background: $c-white;
+  color: $c-black;
+
+  &__navbar {
+    margin: 0 $m-gutter * 2;
+  }
+}
+
+.navlist {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-transform: uppercase;
+
+  &__left {
+
+  }
+
+  &__brand {
+
+  }
 
   &__right {
 
+  }
+
+  &__item {
+    margin: 0.5rem $m-gutter;
   }
 }
