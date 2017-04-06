@@ -2,7 +2,7 @@
 {{#each model as |instrument|}}
   <p>
     {{#link-to 'instrument.challenge' instrument}}
-      {{instrument.title}}
+      <span class="instrument instrument--{{instrument.slug}}">{{instrument.title}}</span>
     {{/link-to}}
   </p>
 {{/each}}
