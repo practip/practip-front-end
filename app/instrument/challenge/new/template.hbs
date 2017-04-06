@@ -1,0 +1,15 @@
+<h1>New Challenge</h1>
+<form {{action "submitChallenge" on="submit"}}>
+  <p>
+    <p>Title</p>
+    <input type="text">
+  </p>
+  <p>
+    <p>Description</p>
+    <textarea cols="30" rows="10"></textarea>
+  </p>
+  {{#link-to 'challenge'}}
+    <button>Back</button>
+  {{/link-to}}
+  <button>Submit</button>
+</form>
