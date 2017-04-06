@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: 'Amatic SC', cursive;
+  font-family: 'Open Sans', sans-serif;
 }
 
 ul {
@@ -14,5 +14,6 @@ img {
 }
 
 a {
+  color: $c-black;
   text-decoration: none;
 }

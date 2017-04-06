@@ -1,10 +1,11 @@
 $m-gutter: 1rem;
-
 $c-black: #141618;
 $c-white: #FFF;
 
 @import 'reset';
-@import 'navbar';
+@import 'hover';
+
+@import 'application';
 @import 'instrument-index';
 
 .section {
