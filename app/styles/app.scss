@@ -1,6 +1,11 @@
 $m-gutter: 1rem;
 
-@import "ember-bootstrap/bootstrap";
+$c-black: #141618;
+$c-white: #FFF;
+
+@import 'reset';
+@import 'navbar';
+@import 'instrument-index';
 
 .section {
   padding: $m-gutter;
@@ -10,8 +15,55 @@ $m-gutter: 1rem;
   max-width: 100rem;
 }
 
-.row__item {
-  flex-basis: calc(100% / 5 - $m-gutter - $m-gutter);
-  flex-grow: 1;
-  margin: $m-gutter;
+.row {
+  display: flex;
+  max-width: 100rem;
+
+  &__item {
+    flex-basis: calc(100% / 5);
+    flex-grow: 1;
+    margin: $m-gutter;
+  }
+}
+
+.instrument {
+  position: relative;
+
+  &__title {
+    position: absolute;
+    color: $c-black;
+    text-transform: uppercase;
+  }
+
+  &__image {
+    position: relative;
+    height: 20rem;
+    cursor: pointer;
+    overflow: hidden;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &::before {
+      display: inline-block;
+      position: absolute;
+      right: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      content: '';
+    }
+
+    &:hover::before {
+      background: transparentize($c-white, 0.3);
+    }
+
+    &:hover .instrument__title {
+      color: $c-black;
+    }
+  }
 }

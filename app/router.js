@@ -7,13 +7,19 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('challenge', function() {
-    this.route('create');
-    this.route('edit');
-    this.route('video');
-  });
   this.route('dashboard');
-  this.route('instrument');
+
+  this.route('instrument', { path: '/instrument' }, function() {
+    this.route('challenge', { path: '/instrument_id' }, function() {
+      this.route('new');
+      this.route('edit');
+      this.route('video');
+    });
+
+    this.route('new');
+    this.route('edit');
+  });
+
   this.route('login', function() {
     this.route('register');
   });
