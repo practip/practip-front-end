@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+img {
+  align-self: center;
+  max-width: 65rem;
+}
+
+a {
+  color: $c-black;
+  text-decoration: none;
+}
