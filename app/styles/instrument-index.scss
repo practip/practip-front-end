@@ -1,16 +1,46 @@
 .row {
   display: flex;
-  max-width: 100rem;
 
   &__item {
-    flex-basis: calc(100% / 5);
-    flex-grow: 1;
+    width: calc(100% / 5 - 2rem);
     margin: $m-gutter;
   }
 }
 
 .instrument {
   position: relative;
+  width: 15rem;
+  height: 20rem;
+
+  &--vocals {
+    height: 100%;
+    background: url('/img/franklin.jpg') no-repeat center;
+  }
+
+  &--guitar {
+    height: 100%;
+    background: url('/img/pass.jpg') no-repeat center;
+    object-fit: cover;
+  }
+
+  &--keys {
+    height: 100%;
+    background: url('/img/herbie.jpg') no-repeat center;
+    background-size: 180%;
+    object-fit: cover;
+  }
+
+  &--drums {
+    background: url('/img/bonham.jpg') no-repeat center;
+    background-size: 105%;
+    height: 100%;
+  }
+
+  &--bass {
+    height: 100%;
+    background: url('/img/jaco.jpg') no-repeat center;
+    background-size: 160%;
+  }
 
   &__title {
     position: absolute;
@@ -18,19 +48,7 @@
     text-transform: uppercase;
   }
 
-  &__image {
-    position: relative;
-    height: 20rem;
-    cursor: pointer;
-    overflow: hidden;
-
-    img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
+  .box {
     &::before {
       display: inline-block;
       position: absolute;
@@ -49,4 +67,24 @@
       color: $c-black;
     }
   }
+
+
+  &__image {
+    position: relative;
+    height: 20rem;
+    cursor: pointer;
+    overflow: hidden;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+  }
 }
+//
+// .instrument {
+//   background: red;
+// }
