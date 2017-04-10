@@ -1,0 +1,45 @@
+.challenges {
+
+  &__header {
+    padding: $m-gutter * 4;
+    background: linear-gradient(45deg, #fff, #fff 10%, rgba(#fff,.64)), url('https://i.ytimg.com/vi/KYLTUu8GG0I/maxresdefault.jpg'), no-repeat center center fixed;
+    text-align: center;
+    text-transform: uppercase;
+
+    &--title {
+      margin: 0;
+      font-size: 2rem;
+      letter-spacing: 10px;
+    }
+
+    &--subtitle {
+      margin: 0;
+      letter-spacing: 4px;
+    }
+  }
+}
+
+.new-challenge {
+  display: flex;
+  flex-direction: row-reverse;
+  padding: $m-gutter;
+
+  &__actual {
+    margin: 0 ($m-gutter * 2);
+    padding: $m-gutter;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+  }
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  &__item {
+    flex-basis: calc(100% / 2 - 1rem - 1rem);
+    flex-grow: 1;
+    margin: $m-gutter;
+  }
+}
