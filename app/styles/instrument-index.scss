@@ -2,14 +2,13 @@
   display: flex;
 
   &__item {
-    width: calc(100% / 5 - 2rem);
+    flex-basis: calc(100% / 5);
     margin: $m-gutter;
   }
 }
 
 .instrument {
   position: relative;
-  width: 15rem;
   height: 20rem;
 
   &--vocals {
@@ -26,20 +25,17 @@
   &--keys {
     height: 100%;
     background: url('/img/herbie.jpg') no-repeat center;
-    background-size: 180%;
     object-fit: cover;
   }
 
   &--drums {
-    background: url('/img/bonham.jpg') no-repeat center;
-    background-size: 105%;
     height: 100%;
+    background: url('/img/bonham.jpg') no-repeat center;
   }
 
   &--bass {
     height: 100%;
     background: url('/img/jaco.jpg') no-repeat center;
-    background-size: 160%;
   }
 
   &__title {
