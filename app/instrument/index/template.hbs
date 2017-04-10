@@ -2,46 +2,20 @@
   <div class="container">
     <div class="row">
 
+      {{#each model as |instrument|}}
       <div class="row__item">
-        <div class="instrument">
-          <div class="instrument__image">
+        <div class="instrument box">
+          {{!-- <div class="instrument__image">
             <img src="http://placecage.com/200/200" alt="">
-            <h1 class="instrument__title">vocals</h1>
-          </div>
+          </div> --}}
+          {{#link-to 'instrument.challenge' instrument}}
+            <div class="instrument--{{instrument.slug}}">
+              {{instrument.title}}
+            </div>
+          {{/link-to}}
         </div>
       </div>
-      <div class="row__item">
-        <div class="instrument">
-          <div class="instrument__image">
-            <img src="http://placecage.com/200/200" alt="">
-            <h1 class="instrument__title">guitar</h1>
-          </div>
-        </div>
-      </div>
-      <div class="row__item">
-        <div class="instrument">
-          <div class="instrument__image">
-            <img src="http://placecage.com/200/200" alt="">
-            <h1 class="instrument__title">keys</h1>
-          </div>
-        </div>
-      </div>
-      <div class="row__item">
-        <div class="instrument">
-          <div class="instrument__image">
-            <img src="http://placecage.com/200/200" alt="">
-            <h1 class="instrument__title">drums</h1>
-          </div>
-        </div>
-      </div>
-      <div class="row__item">
-        <div class="instrument">
-          <div class="instrument__image">
-            <img src="http://placecage.com/200/200" alt="">
-            <h1 class="instrument__title">bass</h1>
-          </div>
-        </div>
-      </div>
+      {{/each}}
 
     </div>
   </div>
