@@ -1,4 +1,4 @@
-<div class="section">
+{{!-- <div class="section">
   <div class="container">
     <div class="row">
 
@@ -45,4 +45,12 @@
 
     </div>
   </div>
-</div>
+</div> --}}
+
+{{#each model as |instrument|}}
+  <span class="instrument instrument--{{title}}">
+    {{#link-to 'instrument.challenge' instrument}}
+      {{instrument.title}}
+    {{/link-to}}
+  </span>
+{{/each}}
