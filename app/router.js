@@ -27,6 +27,7 @@ Router.map(function() {
   this.route('user-profile', function() {
     this.route('edit');
   });
+  this.route('challenge');
 });
 
 export default Router;
