@@ -10,6 +10,7 @@ Router.map(function() {
   this.route('dashboard');
 
   this.route('instrument', { path: '/instruments' }, function() {
+    // loads challenge index based on instrument's slug id
     this.route('challenge', { path: '/:instrument_id' }, function() {
       this.route('new');
       this.route('edit');
