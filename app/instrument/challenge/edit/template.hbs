@@ -1,1 +1,15 @@
-{{outlet}}
+<h1>Edit Challenge</h1>
+<form {{action "saveEdits" on="submit"}}>
+  <p>
+    <p>Title</p>
+    <input type="text">
+  </p>
+  <p>
+    <p>Description</p>
+    <textarea cols="30" rows="10"></textarea>
+  </p>
+  {{#link-to 'challenge'}}
+    <button>Back</button>
+  {{/link-to}}
+  <button>Submit</button>
+</form>
