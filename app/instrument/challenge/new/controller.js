@@ -3,12 +3,14 @@ import Ember from 'ember';
 export default Ember.Controller.extend({
   formValues: {},
 
-  async submitChallenge() {
-    const challenge = this.store.createRecord('challenge', this.formValues);
+  actions: {
+    async submitChallenge() {
+      const challenge = this.store.createRecord('challenge', this.formValues);
 
-    await challenge.save();
+      await challenge.save();
 
-    this.set('formValues', {});
-    this.transitionToRoute('challenge');
+      this.set('formValues', {});
+      this.transitionToRoute('challenge');
+    }
   }
 });
