@@ -1,12 +1,12 @@
-<h1>New Challenge</h1>
+<h1>New Challenge for {{instrument.title}}</h1>
 <form {{action "submitChallenge" on="submit"}}>
   <p>
     <p>Title</p>
-    <input type="text">
+    {{input type="text" value=formValues.title}}
   </p>
   <p>
     <p>Description</p>
-    <textarea cols="30" rows="10"></textarea>
+    {{textarea cols="30" rows="10" value=formValues.description}}
   </p>
   {{#link-to 'challenge'}}
     <button>Back</button>

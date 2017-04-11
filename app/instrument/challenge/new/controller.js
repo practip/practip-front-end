@@ -6,6 +6,7 @@ export default Ember.Controller.extend({
   actions: {
     async submitChallenge() {
       const challenge = this.store.createRecord('challenge', this.formValues);
+      challenge.set('instrument', this.instrument);
 
       await challenge.save();
 
