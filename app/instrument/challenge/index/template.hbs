@@ -5,4 +5,5 @@
 {{#each model as |challenge|}}
   <p>{{challenge.title}}</p>
   <p>{{challenge.description}}</p>
+  <button {{action "deleteChallenge" challenge}}>Delete</button>
 {{/each}}
