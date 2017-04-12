@@ -1,13 +1,12 @@
 $m-gutter: 1rem;
 $c-black: #141618;
-$c-white: #FFF;
+$c-white: #fff;
+$c-img-hvr-white: $c-white, 0.3;
 
 @import 'reset';
 @import 'hover';
-
 @import 'application';
 @import 'instrument-index';
-
 @import 'challenge-index';
 @import 'challenge-new';
 
