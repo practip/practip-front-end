@@ -1,6 +1,6 @@
 <div class="challenges">
   <header class="challenges__header">
-    <h1 class="challenges__header--title">drums</h1>
+    <h1 class="challenges__header--title">{{instrument.name}}</h1>
     <h4 class="challenges__header--subtitle">challenges</h4>
   </header>
 
@@ -19,22 +19,16 @@
   <div class="section">
     <div class="container">
       <div class="grid">
-        <div class="grid__item">
-          <img src="http://placecage.com/500/200" alt="">
-          <h3 class="challenges__title">Major Scales by User</h3>
-        </div>
-        <div class="grid__item">
-          <img src="http://placecage.com/500/200" alt="">
-          <h3 class="challenge-title">Minor Scales by User</h3>
-        </div>
-        <div class="grid__item">
-          <img src="http://placecage.com/500/200" alt="">
-          <h3 class="challenge-title">The Fills of Bonzo</h3>
-        </div>
-        <div class="grid__item">
-          <img src="http://placecage.com/500/200" alt="">
-          <h3 class="challenge-title">The Groove of Steve Jordan</h3>
-        </div>
+        {{#each model as |challenge|}}
+            <div class="grid__item">
+              <h1 class="challenge-title">{{challenge.title}}</h1>
+              <p>{{challenge.description}}</p>
+              <button {{action "deleteChallenge" challenge}}>Delete</button>
+              {{#link-to 'instrument.challenge.edit' challenge}}
+                <button>Edit</button>
+              {{/link-to}}
+            </div>
+        {{/each}}
       </div>
     </div>
   </div>

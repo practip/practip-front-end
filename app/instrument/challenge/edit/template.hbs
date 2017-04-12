@@ -1,1 +1,22 @@
-{{outlet}}
+<div class="section new-challenge">
+  <<div class="container">
+    {{#with (changeset model) as |changeset|}}
+      <form {{action "saveEdits" on="submit"}}>
+        <div class="section">
+          <p class="form__text">title</p>
+          {{input type="text" value=changeset.title}}
+        </div>
+        <div class="section">
+          <p class="form__text">description</p>
+          {{textarea cols="40" rows="10" value=changeset.description}}
+        </div>
+        <div class="section">
+          <div class="button hvr-border-fade">
+            {{#link-to 'instrument.challenge'}}back{{/link-to}}
+          </div>
+          <button class="button hvr-border-fade">submit</button>
+        </div>
+      </form>
+    {{/with}}
+  </div>
+</div>
