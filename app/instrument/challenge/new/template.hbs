@@ -1,15 +1,21 @@
-<h1>New Challenge</h1>
-<form {{action "submitChallenge" on="submit"}}>
-  <p>
-    <p>Title</p>
-    <input type="text">
-  </p>
-  <p>
-    <p>Description</p>
-    <textarea cols="30" rows="10"></textarea>
-  </p>
-  {{#link-to 'challenge'}}
-    <button>Back</button>
-  {{/link-to}}
-  <button>Submit</button>
-</form>
+{{!-- <h1>New Challenge</h1> --}}
+<div class="section new-challenge">
+  <<div class="container">
+    <form {{action "submitChallenge" on="submit"}}>
+      <div class="section">
+        <p class="form__text">title</p>
+        <input type="text" class="form__box">
+      </div>
+      <div class="section">
+        <p class="form__text">description</p>
+        <textarea rows="10" class="form__box"></textarea>
+      </div>
+      <div class="section">
+        <div class="button hvr-border-fade">
+          {{#link-to 'challenge'}}back{{/link-to}}
+        </div>
+        <div class="button hvr-border-fade">submit</div>
+      </div>
+    </form>
+  </div>
+</div>
