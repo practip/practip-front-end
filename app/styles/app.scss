@@ -8,10 +8,33 @@ $c-white: #FFF;
 @import 'application';
 @import 'instrument-index';
 
+@import 'challenge-index';
+@import 'challenge-new';
+
 .section {
   padding: $m-gutter;
 }
 
 .container {
-  max-width: 100rem;
+  max-width: 70rem;
+  margin: auto;
+}
+
+.button {
+  margin: 0.5rem $m-gutter;
+  padding: $m-gutter;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.form {
+
+  &__text {
+    letter-spacing: 4px;
+    text-transform: uppercase;
+  }
+
+  &__box {
+    width: 30vw;
+  }
 }
