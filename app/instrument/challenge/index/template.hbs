@@ -3,7 +3,10 @@
 {{/link-to}}
 
 {{#each model as |challenge|}}
-  <p>{{challenge.title}}</p>
+  <h1>{{challenge.title}}</h1>
   <p>{{challenge.description}}</p>
   <button {{action "deleteChallenge" challenge}}>Delete</button>
+  {{#link-to 'instrument.challenge.edit' challenge}}
+    <button>Edit</button>
+  {{/link-to}}
 {{/each}}

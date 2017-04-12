@@ -11,7 +11,7 @@ export default Ember.Controller.extend({
       await challenge.save();
 
       this.set('formValues', {});
-      this.transitionToRoute('challenge');
+      this.transitionToRoute('instrument.challenge');
     }
   }
 });

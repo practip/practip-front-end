@@ -5,7 +5,7 @@ export default Ember.Controller.extend({
     async saveEdits(changeset) {
       await changeset.save();
 
-      this.transitionToRoute('challenge');
+      this.transitionToRoute('instrument.challenge');
     }
   }
 });
