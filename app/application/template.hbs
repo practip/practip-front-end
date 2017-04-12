@@ -1,20 +1,22 @@
-<header class="banner">
+<div class="banner">
   <nav class="banner__navbar">
-    <div class="navlist navlist__left">
-      <div class="navlist__item hvr-border-fade" href="#">
-        {{#link-to "instrument"}}Home{{/link-to}}
+    <div class="container">
+      <div class="navlist navlist__left">
+        <div class="navlist__item hvr-border-fade" href="#">
+          {{#link-to "instrument"}}Home{{/link-to}}
+        </div>
+        <ul class="navlist navlist__right">
+          <div class="navlist__item hvr-border-fade">
+            {{#link-to "user-profile"}}profile{{/link-to}}
+          </div>
+          <div class="navlist__item hvr-border-fade">
+            {{#link-to "login"}}Sign Out{{/link-to}}
+          </div>
+        </ul>
       </div>
-      <ul class="navlist navlist__right">
-        <div class="navlist__item hvr-border-fade">
-          {{#link-to "user-profile"}}profile{{/link-to}}
-        </div>
-        <div class="navlist__item hvr-border-fade">
-          {{#link-to "login"}}Sign Out{{/link-to}}
-        </div>
-      </ul>
     </div>
   </nav>
-</header>
+</div>
 <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 <script src="https://use.fontawesome.com/2b59555316.js"></script>
 
