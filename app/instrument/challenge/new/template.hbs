@@ -1,20 +1,19 @@
-{{!-- <h1>New Challenge</h1> --}}
 <div class="section new-challenge">
   <<div class="container">
     <form {{action "submitChallenge" on="submit"}}>
       <div class="section">
         <p class="form__text">title</p>
-        <input type="text" class="form__box">
+        {{input type="text" value=formValues.title}}
       </div>
       <div class="section">
         <p class="form__text">description</p>
-        <textarea rows="10" class="form__box"></textarea>
+        {{textarea cols="40" rows="10" value=formValues.description}}
       </div>
       <div class="section">
         <div class="button hvr-border-fade">
-          {{#link-to 'challenge'}}back{{/link-to}}
+          {{#link-to 'instrument.challenge'}}back{{/link-to}}
         </div>
-        <div class="button hvr-border-fade">submit</div>
+        <button class="button hvr-border-fade">submit</button>
       </div>
     </form>
   </div>
