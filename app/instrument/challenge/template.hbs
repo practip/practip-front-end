@@ -1,0 +1,20 @@
+<div class="challenges">
+  <header class="challenges__header">
+    <h1 class="challenges__header--title">{{instrument.name}}</h1>
+    <h4 class="challenges__header--subtitle">challenges</h4>
+  </header>
+
+  <div class="section">
+    <div class="container">
+      <div class="new-challenge">
+        <div class="button hvr-border-fade">
+          {{#link-to 'instrument.challenge.new'}}
+            new challenge
+          {{/link-to}}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {{outlet}}
+</div>
