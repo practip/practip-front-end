@@ -13,7 +13,8 @@ Router.map(function() {
     this.route('challenge', { path: '/:instrument_id' }, function() {
       this.route('new');
       this.route('edit');
-      this.route('video', { path: '/:challenge_id'}, function() {
+      // this.route('video', { path: '/:challenge_id'}, function() {
+      this.route('video', function() {
         this.route('edit');
         this.route('new');
       });
