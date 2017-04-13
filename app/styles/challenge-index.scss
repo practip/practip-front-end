@@ -1,10 +1,6 @@
 .challenges {
 
   &__header {
-    padding: $m-gutter * 4;
-    background: linear-gradient(45deg, #fff, #fff 10%, rgba(#fff,.64)), url('https://image.jimcdn.com/app/cms/image/transf/none/path/se81119021b687bb5/image/i920c0b063df1692b/version/1450003856/image.jpg'), fixed;
-    background-position: center;
-    background-size: cover;
     text-align: center;
     text-transform: uppercase;
 
@@ -17,6 +13,41 @@
     &--subtitle {
       margin: 0;
       letter-spacing: 4px;
+    }
+
+    &-Vocals {
+      padding: $m-gutter * 4;
+      background: linear-gradient(45deg, #fff, #fff 10%, rgba(#fff,.64)), url('/img/vocals-bg.jpg'), fixed;
+      background-position: center;
+      background-size: cover;
+    }
+
+    &-Guitar {
+      padding: $m-gutter * 4;
+      background: linear-gradient(45deg, #fff, #fff 10%, rgba(#fff,.64)), url('/img/guitar-bg.jpg'), fixed;
+      background-position: center;
+      background-size: cover;
+    }
+
+    &-Keys {
+      padding: $m-gutter * 4;
+      background: linear-gradient(45deg, #fff, #fff 10%, rgba(#fff,.64)), url('/img/keys-bg.jpg'), fixed;
+      background-position: center;
+      background-size: cover;
+    }
+
+    &-Drums {
+      padding: $m-gutter * 4;
+      background: linear-gradient(45deg, #fff, #fff 10%, rgba(#fff,.64)), url('/img/drums-bg.jpg'), fixed;
+      background-position: center;
+      background-size: cover;
+    }
+
+    &-Bass {
+      padding: $m-gutter * 4;
+      background: linear-gradient(45deg, #fff, #fff 10%, rgba(#fff,.64)), url('/img/bass-bg.jpg'), fixed;
+      background-position: center;
+      background-size: cover;
     }
   }
 }
