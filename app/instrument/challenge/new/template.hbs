@@ -1,20 +1,20 @@
 <div class="section new-challenge">
   <<div class="container">
-    <form {{action "submitChallenge" on="submit"}}>
-      <div class="section">
-        <p class="text">title</p>
-        {{input type="text" value=formValues.title}}
-      </div>
-      <div class="section">
-        <p class="text">description</p>
-        {{textarea cols="40" rows="10" value=formValues.description}}
-      </div>
-      <div class="section">
-        <div class="button hvr-border-fade">
-          {{#link-to 'instrument.challenge'}}back{{/link-to}}
+    <div class="new-challenge__border">
+      <form {{action "submitChallenge" on="submit"}}>
+        <div class="section">
+          {{input type="text" value=formValues.title class="form" placeholder="Title"}}
         </div>
-        <button class="button hvr-border-fade">submit</button>
-      </div>
-    </form>
+        <div class="section">
+          {{textarea rows="10" value=formValues.description class="form" placeholder="Description"}}
+        </div>
+        <div class="section">
+          <div class="button hvr-border-fade">
+            {{#link-to 'instrument.challenge'}}back{{/link-to}}
+          </div>
+          <button class="button hvr-border-fade">submit</button>
+        </div>
+      </form>
+    </div>
   </div>
 </div>

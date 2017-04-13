@@ -13,6 +13,7 @@ $b-primary: 2.5px solid $c-black;
 @import 'challenge-index';
 @import 'challenge-new';
 @import 'user-profile';
+@import 'login-and-register';
 
 .section {
   padding: $m-gutter;
@@ -28,6 +29,15 @@ $b-primary: 2.5px solid $c-black;
   padding: $m-gutter;
   letter-spacing: 4px;
   text-transform: uppercase;
+
+  &__black {
+    margin: 0.5rem $m-gutter;
+    padding: $m-gutter;
+    background: $c-black;
+    color: $c-white;
+    letter-spacing: 4pc;
+    text-transform: uppercase;
+  }
 }
 
 .text {
@@ -46,4 +56,11 @@ $b-primary: 2.5px solid $c-black;
 
 .form-box {
   width: 30vw;
+}
+
+.form {
+  margin-bottom: $m-gutter * 2;
+  padding: $m-gutter;
+  border: 0;
+  border-bottom: 1px solid $c-black;
 }
