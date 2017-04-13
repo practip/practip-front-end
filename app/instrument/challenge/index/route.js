@@ -5,9 +5,9 @@ export default Ember.Route.extend({
     return this.store.findAll('challenge');
   },
 
-  setupController(controller) {
-    this._super(...arguments);
-
-    controller.set('instrument', this.modelFor('instrument.challenge'));
-  }
+  // setupController(controller) {
+  //   this._super(...arguments);
+  //
+  //   controller.set('instrument', this.modelFor('instrument.challenge'));
+  // }
 });

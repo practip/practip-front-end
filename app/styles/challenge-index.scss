@@ -40,10 +40,11 @@
 
   &__item {
     display: flex;
-    flex-basis: calc(100% / 2 - 2rem);
+    flex-basis: calc(100% / 2 - 2.3rem);
     flex-direction: column;
     flex-grow: 1;
     align-items: center;
     margin: $m-gutter;
+    border: rgba(#000,.4) 0.15rem solid;
   }
 }
