@@ -1,7 +1,7 @@
 <div class="section new-challenge">
   <<div class="container">
     {{#with (changeset model) as |changeset|}}
-      <form {{action "saveEdits" on="submit"}}>
+      <form {{action "saveEdits" changeset on="submit"}}>
         <div class="section">
           <p class="form__text">title</p>
           {{input type="text" value=changeset.title}}
