@@ -1,35 +1,27 @@
-<div class="challenges">
-  <header class="challenges__header">
-    <h1 class="challenges__header--title">{{instrument.name}}</h1>
-    <h4 class="challenges__header--subtitle">challenges</h4>
-  </header>
-
-  <div class="section">
-    <div class="container">
-      <div class="new-challenge">
-        <div class="button hvr-border-fade">
-          {{#link-to 'instrument.challenge.new'}}
-            new challenge
-          {{/link-to}}
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="container">
-      <div class="grid">
-        {{#each model as |challenge|}}
-            <div class="grid__item">
+<div class="section">
+  <div class="container">
+    <div class="grid">
+      {{#each model as |challenge|}}
+          <div class="grid__item">
+            {{#link-to 'instrument.challenge.video' challenge}}
               <h1 class="challenge-title">{{challenge.title}}</h1>
-              <p>{{challenge.description}}</p>
-              <button {{action "deleteChallenge" challenge}}>Delete</button>
+            {{/link-to}}
+            <p>{{challenge.description}}</p>
+            <p>
               {{#link-to 'instrument.challenge.edit' challenge}}
-                <button>Edit</button>
+              <button>Edit</button>
               {{/link-to}}
-            </div>
-        {{/each}}
-      </div>
+              <button {{action "deleteChallenge" challenge}}>Delete</button>
+            </p>
+          </div>
+
+        {{else}}
+        <p>No challenges to display. Add a
+        {{#link-to 'instrument.challenge.new'}}
+           new challenge!
+        {{/link-to}}
+        </p>
+      {{/each}}
     </div>
   </div>
 </div>
