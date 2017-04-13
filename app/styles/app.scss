@@ -1,7 +1,10 @@
-$m-gutter: 1rem;
 $c-black: #141618;
 $c-white: #fff;
 $c-img-hvr-white: $c-white, 0.3;
+
+$m-gutter: 1rem;
+
+$b-primary: 2.5px solid $c-black;
 
 @import 'reset';
 @import 'hover';
@@ -9,6 +12,7 @@ $c-img-hvr-white: $c-white, 0.3;
 @import 'instrument-index';
 @import 'challenge-index';
 @import 'challenge-new';
+@import 'user-profile';
 
 .section {
   padding: $m-gutter;
@@ -26,14 +30,20 @@ $c-img-hvr-white: $c-white, 0.3;
   text-transform: uppercase;
 }
 
-.form {
+.text {
+  letter-spacing: 4px;
+  text-transform: uppercase;
 
-  &__text {
-    letter-spacing: 4px;
+  &__lowercase {
+    letter-spacing: 3px;
+  }
+
+  &__title {
+    letter-spacing: 6px;
     text-transform: uppercase;
   }
+}
 
-  &__box {
-    width: 30vw;
-  }
+.form-box {
+  width: 30vw;
 }
