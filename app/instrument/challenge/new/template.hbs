@@ -1,5 +1,12 @@
 <div class="section new-challenge">
-  <<div class="container">
+  {{!-- <ul>
+    {{#each changeset.errors as |errorSet|}}
+      {{#each changeset.validation as |error|}}
+        <li>{{error}}</li>
+      {{/each}}
+    {{/each}}
+  </ul> --}}
+  <div class="container">
     <form {{action "submitChallenge" on="submit"}}>
       <div class="section">
         <p class="form__text">title</p>
