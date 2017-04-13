@@ -1,8 +1,8 @@
 import Ember from 'ember';
-// import ChallengeValidations from '../../../validations/challenge';
+import ChallengeValidations from '../../../validations/challenge';
 
 export default Ember.Controller.extend({
-  // ChallengeValidations,
+  ChallengeValidations,
 
   actions: {
     async saveEdits(changeset) {
