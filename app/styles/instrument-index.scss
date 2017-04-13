@@ -14,34 +14,58 @@
   &--vocals {
     height: 100%;
     background: url('/img/franklin.jpg') no-repeat center;
+
+    &:hover {
+      opacity: 0.2;
+    }
   }
 
   &--guitar {
     height: 100%;
     background: url('/img/pass.jpg') no-repeat center;
     object-fit: cover;
+
+    &:hover {
+      opacity: 0.2;
+    }
   }
 
   &--keys {
     height: 100%;
     background: url('/img/herbie.jpg') no-repeat center;
     object-fit: cover;
+
+    &:hover {
+      opacity: 0.2;
+    }
   }
 
   &--drums {
     height: 100%;
     background: url('/img/bonham.jpg') no-repeat center;
+
+    &:hover {
+      opacity: 0.2;
+    }
   }
 
   &--bass {
     height: 100%;
     background: url('/img/jaco.jpg') no-repeat center;
+
+    &:hover {
+      opacity: 0.2;
+    }
   }
 
   &__title {
-    position: absolute;
-    color: $c-black;
-    text-transform: uppercase;
+    display: none;
+
+    &:hover {
+      display: block;
+      color: $c-black;
+      text-transform: uppercase;
+    }
   }
 
   .box {
@@ -53,14 +77,6 @@
       width: 100%;
       height: 100%;
       content: '';
-    }
-
-    &:hover::before {
-      background: transparentize($c-white, 0.3);
-    }
-
-    &:hover .instrument__title {
-      color: $c-black;
     }
   }
 
@@ -80,7 +96,3 @@
 
   }
 }
-//
-// .instrument {
-//   background: red;
-// }
