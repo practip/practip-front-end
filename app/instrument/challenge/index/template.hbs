@@ -1,7 +1,7 @@
 <div class="section">
   <div class="container">
     <div class="grid">
-      {{#each model as |challenge|}}
+      {{#each model.challenges as |challenge|}}
           <div class="grid__item">
             {{#link-to 'instrument.challenge.video' challenge}}
               <h1 class="challenge-title">{{challenge.title}}</h1>
