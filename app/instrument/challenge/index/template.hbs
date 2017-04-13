@@ -8,12 +8,19 @@
             {{/link-to}}
             <p>{{challenge.description}}</p>
             <p>
-              <button {{action "deleteChallenge" challenge}}>Delete</button>
               {{#link-to 'instrument.challenge.edit' challenge}}
-                <button>Edit</button>
+              <button>Edit</button>
               {{/link-to}}
+              <button {{action "deleteChallenge" challenge}}>Delete</button>
             </p>
           </div>
+
+        {{else}}
+        <p>No challenges to display. Add a
+        {{#link-to 'instrument.challenge.new'}}
+           new challenge!
+        {{/link-to}}
+        </p>
       {{/each}}
     </div>
   </div>
