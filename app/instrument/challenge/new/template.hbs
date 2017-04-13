@@ -3,18 +3,14 @@
     <div class="new-challenge__border">
       <form {{action "submitChallenge" on="submit"}}>
         <div class="section">
-          <p class="form__text">title</p>
-          {{input type="text" value=formValues.title}}
+          {{input type="text" value=formValues.title class="form" placeholder="Title"}}
         </div>
         <div class="section">
-          <p class="form__text">description</p>
           {{textarea rows="10" value=formValues.description class="form" placeholder="Description"}}
         </div>
         <div class="section">
-          <div class="button hvr-border-fade">
-            {{#link-to 'instrument.challenge'}}back{{/link-to}}
-          </div>
-          <button class="button hvr-border-fade">submit</button>
+          {{#link-to 'instrument.challenge'}}<button class="button__black">back</button>{{/link-to}}
+          <button class="button__black">submit</button>
         </div>
       </form>
     </div>
