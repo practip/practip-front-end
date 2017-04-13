@@ -1,0 +1,28 @@
+.video {
+  &__item {
+  display: flex;
+  max-width: calc(100% / 3 - 4.3rem);
+  flex-direction: column;
+  flex-grow: 1;
+  align-items: center;
+  margin: $m-gutter;
+  border: rgba(#000,.4) 0.15rem solid;
+  padding: 1rem;
+  }
+
+  &-title {
+    margin: 0;
+    font-size: 20px;
+  }
+
+  &-description {
+    margin: 0.2rem;
+    font-size: 12px;
+  }
+}
+
+.small-text {
+  margin: 0.2rem;
+  font-size: 15px;
+  color: rgba(#000,.45);
+}

@@ -1,11 +1,13 @@
 <div class="section new-challenge">
-  <<div class="container">
+  <div class="container">
     <div class="new-challenge__border">
       <form {{action "submitChallenge" on="submit"}}>
         <div class="section">
-          {{input type="text" value=formValues.title class="form" placeholder="Title"}}
+          <p class="form__text">title</p>
+          {{input type="text" value=formValues.title}}
         </div>
         <div class="section">
+          <p class="form__text">description</p>
           {{textarea rows="10" value=formValues.description class="form" placeholder="Description"}}
         </div>
         <div class="section">
