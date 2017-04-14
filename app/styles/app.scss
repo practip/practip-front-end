@@ -21,6 +21,12 @@ $b-primary: 2.5px solid $c-black;
   padding: $m-gutter;
 }
 
+.button-bar {
+  display: flex;
+  justify-content: space-between;
+  flex-basis: 100%;
+}
+
 .container {
   max-width: 70rem;
   margin: auto;

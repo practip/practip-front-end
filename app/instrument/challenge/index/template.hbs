@@ -1,5 +1,17 @@
 <div class="section">
   <div class="container">
+    <div class="new-challenge">
+      <div class="button hvr-border-fade">
+        {{#link-to 'instrument.challenge.new'}}
+          New Challenge
+        {{/link-to}}
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="container">
     <div class="grid">
       {{#each model.challenges as |challenge|}}
           <div class="grid__item">
@@ -18,7 +30,7 @@
         {{else}}
         <p>No challenges to display. Add a
         {{#link-to 'instrument.challenge.new'}}
-           new challenge!
+           <u>new challenge!</u>
         {{/link-to}}
         </p>
       {{/each}}

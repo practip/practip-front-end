@@ -1,9 +1,9 @@
-.new-challenge {
+.new-challenge-form {
   display: flex;
+  flex-direction: column;
   align-items: center;
+  width: 30rem;
+  padding: 1rem;
+  border: $b-primary;
   text-align: center;
-
-  &__border {
-    border: $b-primary;
-  }
 }
