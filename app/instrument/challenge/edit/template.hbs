@@ -1,24 +1,25 @@
 <div class="section new-challenge">
   <div class="container">
-    {{#with (changeset model ChallengeValidations) as |changeset|}}
-    {{!-- {{#with (changeset model) as |changeset|}} --}}
-      <div class="new-challenge__border">
+    <div class="new-challenge-form">
+      {{!-- {{#with (changeset model) as |changeset|}} --}}
+      {{#with (changeset model ChallengeValidations) as |changeset|}}
         <form {{action "saveEdits" changeset on="submit"}}>
           <div class="section">
             {{input type="text" value=changeset.title class="form" placeholder="Title"}}
           </div>
           <div class="section">
-            {{textarea rows="10" value=changeset.description class="form" placeholder="Description"}}
+            {{textarea rows="10" cols="45" value=changeset.description class="form" placeholder="Description"}}
           </div>
-          <div class="section">
+          <div class="button-bar">
             {{#link-to 'instrument.challenge'}}
               <button class="button__black">back</button>
             {{/link-to}}
             <button class="button__black">submit</button>
           </div>
         </form>
-      </div>
-    {{/with}}
+      {{/with}}
+    </div>
+
     <ul>
       {{#each changeset.errors as |errorSet|}}
         {{#each changeset.validation as |error|}}
@@ -26,5 +27,6 @@
         {{/each}}
       {{/each}}
     </ul>
+
   </div>
 </div>
