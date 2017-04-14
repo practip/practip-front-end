@@ -1,1 +1,11 @@
-{{outlet}}
+<h1>Upload Video</h1>
+
+<h3>Directions:</h3>
+<p>Click the UPLOAD button to upload a video to Youtube.</p>
+<p>After upload is complete, post the link to your new video in the form below</p>
+<p>Click 'Submit' to publish your video!</p>
+<form {{action "submitVideo" on="submit"}}>
+  <a href="https://www.youtube.com/upload" target='_blank'><button class="button__black">UPLOAD</button></a>
+  {{input type="url" value=video.URL}}
+  <button>Submit</button>
+</form>
