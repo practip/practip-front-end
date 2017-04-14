@@ -1,83 +1,59 @@
 .row {
   display: flex;
+  width: 100%;
 
   &__item {
     flex-basis: calc(100% / 5);
-    margin: $m-gutter;
+    margin: $m-gutter / 2;
   }
 }
 
 .instrument {
+  display: block;
   position: relative;
-  height: 20rem;
+  height: 60vh;
 
-  &--vocals {
+  &__bg {
     height: 100%;
-    background: url('/img/franklin.jpg') no-repeat center;
+    transition: opacity 400ms;
 
     &:hover {
       opacity: 0.2;
     }
-  }
 
-  &--guitar {
-    height: 100%;
-    background: url('/img/pass.jpg') no-repeat center;
-    object-fit: cover;
+    &--vocals {
+      background: url('/img/aretha.jpg') no-repeat center;
+    }
 
-    &:hover {
-      opacity: 0.2;
+    &--guitar {
+      background: url('/img/pass.jpg') no-repeat center;
+    }
+
+    &--keys {
+      background: url('/img/herbie.jpg') no-repeat center;
+    }
+
+    &--drums {
+      background: url('/img/ringo.jpg') no-repeat center;
+    }
+
+    &--bass {
+      background: url('/img/pino.jpg') no-repeat center;
     }
   }
 
-  &--keys {
-    height: 100%;
-    background: url('/img/herbie.jpg') no-repeat center;
-    object-fit: cover;
 
-    &:hover {
-      opacity: 0.2;
-    }
-  }
-
-  &--drums {
-    height: 100%;
-    background: url('/img/bonham.jpg') no-repeat center;
-
-    &:hover {
-      opacity: 0.2;
-    }
-  }
-
-  &--bass {
-    height: 100%;
-    background: url('/img/jaco.jpg') no-repeat center;
-
-    &:hover {
-      opacity: 0.2;
-    }
-  }
-
+// TROUBLE WITH NOT HAVING TEXT BEFORE HOVERING
   &__title {
     display: none;
+    position: absolute;
+    height: 60vh;
 
-    &:hover {
-      display: block;
-      color: $c-black;
-      text-transform: uppercase;
-    }
-  }
+  //   &:hover {
+  //     display: inline;
+  //     color: $c-black;
+  //   }
 
-  .box {
-    &::before {
-      display: inline-block;
-      position: absolute;
-      right: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      content: '';
-    }
   }
 
 
@@ -93,6 +69,5 @@
       height: 100%;
       object-fit: cover;
     }
-
   }
 }
