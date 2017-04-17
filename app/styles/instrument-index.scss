@@ -11,7 +11,22 @@
 .instrument {
   display: block;
   position: relative;
+  align-items: center;
   height: 60vh;
+
+  &__title {
+    display: none;
+    position: absolute;
+    top: 35%;
+    left: 20%;
+    height: 60vh;
+
+    *:hover > & {
+      display: block;
+      color: $c-black;
+    }
+
+  }
 
   &__bg {
     height: 100%;
@@ -23,39 +38,29 @@
 
     &--vocals {
       background: url('/img/aretha.jpg') no-repeat center;
+      background-size: cover;
     }
 
     &--guitar {
       background: url('/img/pass.jpg') no-repeat center;
+      background-size: cover;
     }
 
     &--keys {
       background: url('/img/herbie.jpg') no-repeat center;
+      background-size: cover;
     }
 
     &--drums {
       background: url('/img/ringo.jpg') no-repeat center;
+      background-size: cover;
     }
 
     &--bass {
       background: url('/img/pino.jpg') no-repeat center;
+      background-size: cover;
     }
   }
-
-
-// TROUBLE WITH NOT HAVING TEXT BEFORE HOVERING
-  &__title {
-    display: none;
-    position: absolute;
-    height: 60vh;
-
-  //   &:hover {
-  //     display: inline;
-  //     color: $c-black;
-  //   }
-
-  }
-
 
   &__image {
     position: relative;
