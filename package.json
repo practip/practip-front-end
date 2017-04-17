@@ -46,6 +46,8 @@
   },
   "private": true,
   "dependencies": {
+    "ember-modal-dialog": "^1.0.0",
+    "ember-youtube": "^0.8.0",
     "hover.css": "^2.2.0"
   }
 }
