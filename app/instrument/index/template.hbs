@@ -4,11 +4,10 @@
 
       {{#each model as |instrument|}}
       <div class="row__item">
-        <div class="instrument box">
+        <div class="instrument hvr-fade">
           {{#link-to 'instrument.challenge' instrument}}
-            <div class="instrument--{{instrument.slug}}">
-              {{instrument.title}}
-            </div>
+            <div class="instrument__title section text center">{{instrument.title}}</div>
+            <div class="instrument__bg instrument__bg--{{instrument.slug}}"></div>
           {{/link-to}}
         </div>
       </div>
