@@ -9,20 +9,6 @@
     </div>
   </div>
 </div>
-{{!-- <div class="section">
-<div class="container">
-<div class="grid">
-<div class="video__item">
-<img src="http://placecera.com/300/300" alt="">
-<h1 class="video-title">Video Title</h1>
-<p class="small-text">by <u>User</u> on April 1</p>
-<p class="video-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-<p class="small-text">Comments</p>
-</div>
-</div>
-</div>
-</div> --}}
-
 <div class="section">
   <div class="container">
     <h1>{{challenge.title}}</h1>
@@ -31,9 +17,8 @@
     <div class="grid">
       {{#each challenge.posts as |post|}}
           <div class="video__item">
-            {{!-- {{#link-to 'instrument.challenge.video' post}} --}}
-              <h1 class="video-title">{{post.title}}</h1>
-            {{!-- {{/link-to}} --}}
+            {{ember-youtube ytid=post.youtubeId width="480" height="360"}}
+            <h1 class="video-title">{{post.title}}</h1>
             <p class="small-text">by <u>User</u> on April 1</p>
             <p class="video-description">{{post.description}}</p>
             {{!-- <p>
@@ -42,14 +27,18 @@
               {{/link-to}}
               <button {{action "deleteChallenge" post}}>Delete</button>
             </p> --}}
+            {{#link-to 'instrument.challenge.video.comments' post class="small-text"}}
+              Comments
+            {{/link-to}}
+            {{outlet}}
           </div>
-{{!--
+
         {{else}}
         <p>No posts to display. Add a
         {{#link-to 'instrument.challenge.video.new'}}
-           new post!
+           <u>new post!</u>
         {{/link-to}}
-        </p> --}}
+        </p>
       {{/each}}
     </div>
   </div>
