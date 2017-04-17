@@ -1,13 +1,13 @@
 .video {
   &__item {
-  display: flex;
-  max-width: calc(100% / 3 - 4.3rem);
-  flex-direction: column;
-  flex-grow: 1;
-  align-items: center;
-  margin: $m-gutter;
-  border: rgba(#000,.4) 0.15rem solid;
-  padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: center;
+    max-width: calc(100% / 2 - 4.3rem);
+    margin: $m-gutter;
+    padding: 1rem;
+    border: rgba(#000,.4) 0.15rem solid;
   }
 
   &-title {

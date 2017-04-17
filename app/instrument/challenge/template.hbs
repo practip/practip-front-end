@@ -1,15 +1,9 @@
 <div class="challenges">
   <header class="challenges__header challenges__header--{{instrument.slug}}">
     <h1 class="challenges__header--title">{{instrument.title}}</h1>
-    <h4 class="challenges__header--subtitle center">challenges</h4>
+    {{#link-to 'instrument.challenge' instrument}}
+      <h4 class="challenges__header--subtitle">challenges</h4>
+    {{/link-to}}
   </header>
   {{outlet}}
 </div>
-
-{{!-- {{#if isCorrectRouteActive}}
-<div class="button hvr-border-fade">
-{{#link-to 'instrument.challenge.new'}}
-New Video
-{{/link-to}}
-</div>
-{{/if}} --}}
