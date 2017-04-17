@@ -29,7 +29,7 @@
     <p>{{challenge.description}}</p>
 
     <div class="grid">
-      {{#each model as |post|}}
+      {{#each challenge.posts as |post|}}
           <div class="video__item">
             {{!-- {{#link-to 'instrument.challenge.video' post}} --}}
               <h1 class="video-title">{{post.title}}</h1>
