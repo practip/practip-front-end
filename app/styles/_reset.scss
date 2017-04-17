@@ -3,6 +3,10 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 ul {
   padding-left: 0;
   list-style: none;

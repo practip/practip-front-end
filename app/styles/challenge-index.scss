@@ -15,7 +15,7 @@
       letter-spacing: 4px;
     }
 
-    &-vocals {
+    &--vocals {
       padding: $m-gutter * 4;
       background: linear-gradient(45deg, $c-white, $c-white 10%, $c-transparent-white), url('/img/vocals-bg.jpg'), fixed;
       background-position: center;
@@ -57,13 +57,21 @@
   flex-wrap: wrap;
 
   &__item {
-    display: flex;
     flex-basis: calc(100% / 2 - 5rem);
-    flex-direction: column;
     flex-grow: 1;
-    align-items: center;
     margin: $m-gutter;
-    padding: $m-gutter;
-    border: $c-black 0.15rem solid;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: $m-gutter;
+  border: $c-black 0.15rem solid;
+
+  &__content {
+    flex-grow: 1;
+    margin-bottom: $m-gutter * 2;
   }
 }
