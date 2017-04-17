@@ -5,4 +5,5 @@ export default DS.Model.extend({
   description: DS.attr('string'),
 
   instrument: DS.belongsTo('instrument'),
+  posts: DS.hasMany('post'),
 });
