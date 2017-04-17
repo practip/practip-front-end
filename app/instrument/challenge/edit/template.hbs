@@ -1,6 +1,6 @@
 <div class="section new-challenge">
   <div class="container">
-    <div class="new-challenge-form">
+    <div class="form-box">
       {{!-- {{#with (changeset model) as |changeset|}} --}}
       {{#with (changeset model ChallengeValidations) as |changeset|}}
         <form {{action "saveEdits" changeset on="submit"}}>
