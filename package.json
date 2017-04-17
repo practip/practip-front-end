@@ -46,6 +46,7 @@
   },
   "private": true,
   "dependencies": {
+    "ember-youtube": "^0.8.0",
     "hover.css": "^2.2.0"
   }
 }
