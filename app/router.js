@@ -16,6 +16,10 @@ Router.map(function() {
       this.route('video', { path: '/challenges/:challenge_id'}, function() {
         this.route('edit');
         this.route('new');
+        this.route('comments', function() {
+          this.route('edit');
+          this.route('new');
+        });
       });
     });
 
