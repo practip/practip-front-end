@@ -15,22 +15,30 @@
     <div class="grid">
       {{#each model.challenges as |challenge|}}
           <div class="grid__item">
-            {{#link-to 'instrument.challenge.video' challenge}}
-              <h2 class="text__title">{{challenge.title}}</h2>
-            {{/link-to}}
-            <h3 class="text__lowercase">{{challenge.description}}</h3>
-            <p class="button-bar">
-              {{#link-to 'instrument.challenge.edit' challenge}}
-              <button class="button__black">Edit</button>
-              {{/link-to}}
-              <button class="button__black" {{action "deleteChallenge" challenge}}>Delete</button>
-            </p>
+            <div class="card">
+              <div class="card__content center section">
+                <h3 class="text__title">
+                  {{#link-to 'instrument.challenge.video' challenge}}
+                  {{challenge.title}}
+                  {{/link-to}}
+                </h3>
+                <p class="text__lowercase">{{challenge.description}}</p>
+              </div>
+              <div class="card__footer">
+                <p class="button-bar">
+                  {{#link-to 'instrument.challenge.edit' challenge}}
+                    <div class="button__black">Edit</div>
+                  {{/link-to}}
+                  <div class="button__black" {{action "deleteChallenge" challenge}}>Delete</div>
+                </p>
+              </div>
+            </div>
           </div>
 
         {{else}}
         <p>No challenges to display. Add a
         {{#link-to 'instrument.challenge.new'}}
-           <u>new challenge!</u>
+           <div>new challenge!</div>
         {{/link-to}}
         </p>
       {{/each}}
