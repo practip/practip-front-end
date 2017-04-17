@@ -52,19 +52,6 @@
   }
 }
 
-.new-challenge {
-  display: flex;
-  flex-direction: row-reverse;
-  padding: $m-gutter;
-
-  &__actual {
-    margin: 0 ($m-gutter * 2);
-    padding: $m-gutter;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-  }
-}
-
 .grid {
   display: flex;
   flex-wrap: wrap;
@@ -79,8 +66,4 @@
     border: rgba(#000,.4) 0.15rem solid;
     padding: 1rem;
   }
-}
-
-.challenge-title {
-  margin: 0;
 }

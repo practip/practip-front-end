@@ -17,6 +17,9 @@ $b-primary: 2.5px solid $c-black;
 
 @import 'video-index';
 
+@import "ember-modal-dialog/ember-modal-structure";
+@import "ember-modal-dialog/ember-modal-appearance";
+
 .section {
   padding: $m-gutter;
 }
@@ -62,13 +65,15 @@ $b-primary: 2.5px solid $c-black;
   }
 }
 
-.form-box {
-  width: 30vw;
-}
-
 .form {
+  width: 50vw;
   margin-bottom: $m-gutter * 2;
   padding: $m-gutter;
   border: 0;
   border-bottom: 1px solid $c-black;
+}
+
+.form-box {
+  padding: $m-gutter;
+  border: $b-primary;
 }
