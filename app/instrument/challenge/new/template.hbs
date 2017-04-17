@@ -1,12 +1,12 @@
 <div class="section new-challenge">
   <div class="container">
-    <div class="new-challenge-form">
+    <div class="form-box center">
       <form {{action "submitChallenge" on="submit"}}>
-        {{input type="text" value=formValues.title class="form" placeholder="Title"}}
-        {{textarea rows="10" cols="45" value=formValues.description class="form" placeholder="Description"}}
+        <div>{{input type="text" value=formValues.title class="form" placeholder="Title"}}</div>
+        <div>{{textarea rows="10" value=formValues.description class="form" placeholder="Description"}}</div>
         <div class="button-bar">
-          {{#link-to 'instrument.challenge'}}<button class="button__black">back</button>{{/link-to}}
-          <button class="button__black">submit</button>
+          <div>{{#link-to 'instrument.challenge'}}<button class="button__black">back</button>{{/link-to}}</div>
+          <div><button class="button__black">submit</button></div>
         </div>
       </form>
     </div>
