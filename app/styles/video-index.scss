@@ -9,6 +9,14 @@
   padding: $m-gutter;
   border: $b-primary;
 
+  &-title {
+    margin: 0;
+  }
+
+  &-description {
+    margin: 0.5rem 0;
+  }
+
   &__bar {
     display: flex;
     align-items: center;
