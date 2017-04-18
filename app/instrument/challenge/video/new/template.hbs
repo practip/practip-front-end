@@ -7,7 +7,7 @@
         <form {{action "submitVideo" changeset on="submit"}}>
           <p>{{input type="url" value=changeset.videoUrl placeholder="Video URL"}}</p>
           <p>{{input type="text" value=changeset.title placeholder="Post Title"}}</p>
-          <p>{{input type="text" value=changeset.description placeholder="Post Description"}}</p>
+          <p>{{textarea type="text" value=changeset.description placeholder="Post Description"}}</p>
           {{#link-to 'instrument.challenge.video'}}
             {{!-- <button class="button__black">Back</button> --}}
           {{/link-to}}

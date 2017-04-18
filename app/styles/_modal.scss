@@ -1,6 +1,52 @@
 .ember-modal-dialog {
-  width: calc(100% - 4rem);
+  width: calc(50% - 4rem);
   max-width: $m-maxwidth;
-  margin: 2rem;
-  padding: 4rem;
+  padding: 2rem;
+}
+
+.video-modal {
+  top: 50%;
+  left: 50%;
+  width: 65%;
+  height: 70vh;
+  transform: translate(-50%, -50%);
+}
+
+.comment {
+  margin: 0;
+
+  &-modal {
+    display: flex;
+
+    &__info {
+      width: 100%;
+      margin-left: 1rem;
+    }
+  }
+
+  &-feed {
+    height: 30vh;
+    overflow: scroll;
+    // border: rgba($c-black, .2) .25px solid;
+
+    > * + * {
+      border-top: rgba($c-black, .2) .25px solid;
+    }
+
+    &-box {
+      width: 100%;
+      margin: 0;
+      padding: 0.5rem;
+    }
+  }
+
+  &-input {
+    margin: 0.4rem;
+    padding: 0.4rem;
+  }
+}
+
+.username {
+  margin: 0;
+  color: rgba($c-black, .5);
 }

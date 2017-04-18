@@ -1,3 +1,49 @@
-{{#modal-dialog translucentOverlay=true close="closeModalDialog"}}
-HELLO
-{{/modal-dialog}}
+{{#video-modal translucentOverlay=true close="closeModalDialog" container-class=""}}
+    <div class="comment-modal">
+      {{ember-youtube ytid=post.youtubeId width="480" height="360"}}
+      <div class="comment-modal__info">
+        <h1 class="video-title">{{post.title}}</h1>
+        <p class="small-text">by <u>User</u> on April 1</p>
+        <p class="video-description">{{post.description}}</p>
+        <p class="small-text">Comments</p>
+
+        <div class="comment-feed">
+          <div class="comment-feed-box">
+            <p class="username">calebjwl</p>
+            <p class="comment">This is awesome!</p>
+          </div>
+          <div class="comment-feed-box">
+            <p class="username">calebjwl</p>
+            <p class="comment">This is awesome!</p>
+          </div>
+          <div class="comment-feed-box">
+            <p class="username">calebjwl</p>
+            <p class="comment">This is awesome!</p>
+          </div>
+          <div class="comment-feed-box">
+            <p class="username">calebjwl</p>
+            <p class="comment">This is awesome!</p>
+          </div>
+          <div class="comment-feed-box">
+            <p class="username">calebjwl</p>
+            <p class="comment">This is awesome!</p>
+          </div>
+          <div class="comment-feed-box">
+            <p class="username">calebjwl</p>
+            <p class="comment">This is awesome!</p>
+          </div>
+          <div class="comment-feed-box">
+            <p class="username">calebjwl</p>
+            <p class="comment">This is awesome!</p>
+          </div>
+          <div class="comment-feed-box">
+            <p class="username">calebjwl</p>
+            <p class="comment">This is awesome!</p>
+          </div>
+        </div>
+
+        <input type="text" placeholder="Add a comment..." class="comment-input">
+        <button class="submit">Submit</button>
+      </div>
+    </div>
+{{/video-modal}}
