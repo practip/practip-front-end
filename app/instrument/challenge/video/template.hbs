@@ -11,35 +11,38 @@
 </div>
 <div class="section">
   <div class="container">
-    <h1>{{challenge.title}}</h1>
-    <p>{{challenge.description}}</p>
+    <h1 class="text__title">{{challenge.title}}</h1>
+    <p class="text__lowercase">{{challenge.description}}</p>
 
     <div class="grid">
       {{#each challenge.posts as |post|}}
-          <div class="video__item">
+          <div class="video">
             {{ember-youtube ytid=post.youtubeId width="480" height="360"}}
             <h1 class="video-title">{{post.title}}</h1>
-            <p class="small-text">by <u>User</u> on April 1</p>
+            <p class="text__lowercase">by <u>User</u> on April 1</p>
             <p class="video-description">{{post.description}}</p>
-            <div class="video__item-bar">
-              <div class="no-margin">
-                {{#link-to 'instrument.challenge.video.edit' post}}
-                  <button>Edit</button>
-                {{/link-to}}
-                <button {{action "deletePost" post}}>Delete</button>
+            <div class="video__bar section">
+              {{#link-to 'instrument.challenge.video.edit' post}}
+                <button class="button button--black">edit</button>
+              {{/link-to}}
+              <div class="button button--black" {{action "deletePost" post}}>Delete
               </div>
               {{#link-to 'instrument.challenge.video.comments' post class="small-text"}}
-              Comments
+                <div class="button button--black">Comments</div>
               {{/link-to}}
             </div>
           </div>
 
         {{else}}
-        <p>No posts to display. Add a
-        {{#link-to 'instrument.challenge.video.new'}}
-           <u>new post!</u>
-        {{/link-to}}
-        </p>
+        <div class="section">
+          <div class="container">
+            <p class="text form-box">No posts to display. Add a
+              {{#link-to 'instrument.challenge.video.new'}}
+                new video!
+              {{/link-to}}
+            </p>
+          </div>
+        </div>
       {{/each}}
     </div>
   </div>
