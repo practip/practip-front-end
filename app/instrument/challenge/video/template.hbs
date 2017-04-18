@@ -1,11 +1,11 @@
 <div class="section">
   <div class="container">
     <div class="new-challenge">
+      {{#link-to 'instrument.challenge.video.new'}}
       <div class="button hvr-border-fade">
-        {{#link-to 'instrument.challenge.video.new'}}
           New Video
-        {{/link-to}}
       </div>
+      {{/link-to}}
     </div>
   </div>
 </div>
@@ -21,16 +21,15 @@
             <h1 class="video-title">{{post.title}}</h1>
             <p class="small-text">by <u>User</u> on April 1</p>
             <p class="video-description">{{post.description}}</p>
-            {{!-- <p>
-              {{#link-to 'instrument.challenge.video.edit' post}}
-              <button>Edit</button>
-              {{/link-to}}
-              <button {{action "deleteChallenge" post}}>Delete</button>
-            </p> --}}
             {{#link-to 'instrument.challenge.video.comments' post class="small-text"}}
               Comments
             {{/link-to}}
-            {{outlet}}
+            <p>
+              {{#link-to 'instrument.challenge.video.edit' post}}
+              <button>Edit</button>
+              {{/link-to}}
+              <button {{action "deletePost" post}}>Delete</button>
+            </p>
           </div>
 
         {{else}}
@@ -43,3 +42,4 @@
     </div>
   </div>
 </div>
+{{outlet}}
