@@ -1,3 +1,5 @@
+/* Hover Border Fade */
+
 .hvr-border-fade {
   display: inline-block;
   transform: perspective(1px) translateZ(0);
@@ -11,6 +13,8 @@
   box-shadow: inset 0 0 0 2px $c-black, 0 0 1px transparent;
 }
 
+/* Hover Fade */
+
 .hvr-fade {
   transform: perspective(1px) translateZ(0);
   transition-duration: 0.3s;
@@ -23,4 +27,33 @@
 .hvr-fade:hover, .hvr-fade:focus, .hvr-fade:active {
   background-color: $c-white;
   color: $c-white
+}
+
+/* Underline From Center */
+
+.hvr-underline-from-center {
+  padding-bottom: $m-gutter / 3;
+  display: inline-block;
+  position: relative;
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+}
+
+.hvr-underline-from-center:before {
+  position: absolute;
+  right: 50%;
+  bottom: 0;
+  left: 50%;
+  height: 1px;
+  transition-duration: 0.3s;
+  transition-property: left, right;
+  transition-timing-function: ease-out;
+  background: $c-black;
+  content: '';
+  z-index: -1;
+}
+
+.hvr-underline-from-center:hover:before, .hvr-underline-from-center:focus:before, .hvr-underline-from-center:active:before {
+  right: 0;
+  left: 0;
 }
