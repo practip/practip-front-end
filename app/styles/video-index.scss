@@ -9,6 +9,13 @@
     margin: $m-gutter;
     padding: 1rem;
     border: rgba(#000,.4) 0.15rem solid;
+
+    &-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
   }
 
   &-title {
