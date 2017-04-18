@@ -1,15 +1,6 @@
 import Ember from 'ember';
+import RedirectOnClose from '../redirect-on-close';
 
-export default Ember.Controller.extend({
-  isShowingModal: true,
-  actions: {
-    closeModalDialog() {
-      this.set('isShowingModal', false);
-      this.transitionToRoute('instrument.challenge.video')
-    },
+export default Ember.Controller.extend(RedirectOnClose, {
 
-    showModalDialog() {
-      this.set('isShowingModal', true);
-    }
-  }
 });

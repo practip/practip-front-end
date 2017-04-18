@@ -4,9 +4,12 @@ $c-img-hvr-white: $c-white, 0.3;
 $c-transparent-white: rgba(#fff,.64);
 
 $m-gutter: 1rem;
+$m-maxwidth: 65rem;
 
 $b-primary: 2.5px solid $c-black;
 
+@import "ember-modal-dialog/ember-modal-structure";
+@import "ember-modal-dialog/ember-modal-appearance";
 @import 'reset';
 @import 'hover';
 @import 'application';
@@ -17,9 +20,7 @@ $b-primary: 2.5px solid $c-black;
 @import 'login-and-register';
 
 @import 'video-index';
-
-@import "ember-modal-dialog/ember-modal-structure";
-@import "ember-modal-dialog/ember-modal-appearance";
+@import 'modal';
 
 .section {
   padding: $m-gutter;
