@@ -35,11 +35,15 @@
           </div>
 
         {{else}}
-        <p>No posts to display. Add a
-        {{#link-to 'instrument.challenge.video.new'}}
-           <u>new post!</u>
-        {{/link-to}}
-        </p>
+        <div class="section">
+          <div class="container">
+            <p class="text">No posts to display. Add a
+              {{#link-to 'instrument.challenge.video.new'}}
+                new post!
+              {{/link-to}}
+            </p>
+          </div>
+        </div>
       {{/each}}
     </div>
   </div>
