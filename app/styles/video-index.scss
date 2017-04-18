@@ -4,7 +4,7 @@
     flex-direction: column;
     flex-grow: 1;
     align-items: center;
-    max-width: calc(100% / 2 - 4.3rem);
+    min-width: calc(100% / 2 - 2rem);
     margin: $m-gutter;
     padding: 1rem;
     border: rgba(#000,.4) 0.15rem solid;
