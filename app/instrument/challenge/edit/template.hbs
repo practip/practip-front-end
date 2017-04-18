@@ -11,9 +11,9 @@
             {{textarea rows="10" cols="45" value=changeset.description class="form" placeholder="Description"}}
           </div>
           <div class="button-bar">
-            <div class="button__black">submit</div>
-            {{#link-to 'instrument.challenge'}}
-              <div class="button__black">back</div>
+            <button class="button button--black button--fullwidth">submit</button>
+            {{#link-to 'instrument.challenge' class="button button--black"}}
+              back
             {{/link-to}}
           </div>
         </form>

@@ -27,20 +27,26 @@
               <div class="card__footer">
                 <p class="button-bar">
                   {{#link-to 'instrument.challenge.edit' challenge}}
-                    <div class="button__black">Edit</div>
+                    <div class="button button--black">Edit</div>
                   {{/link-to}}
-                  <div class="button__black" {{action "deleteChallenge" challenge}}>Delete</div>
+                  <div class="button button--black" {{action "deleteChallenge" challenge}}>Delete</div>
                 </p>
               </div>
             </div>
           </div>
 
         {{else}}
-        <p>No challenges to display. Add a
-        {{#link-to 'instrument.challenge.new'}}
-           <div>new challenge!</div>
-        {{/link-to}}
-        </p>
+        <div class="section">
+          <div class="container">
+            <div class="">
+              <p class="text">No challenges to display. Add a
+                {{#link-to 'instrument.challenge.new'}}
+                  new challenge!
+                {{/link-to}}
+              </p>
+            </div>
+          </div>
+        </div>
       {{/each}}
     </div>
   </div>
