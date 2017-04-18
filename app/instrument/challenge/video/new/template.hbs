@@ -2,7 +2,6 @@
   <div class="section">
     <div class="container">
       <h1>Upload Video</h1>
-
       {{#with (changeset formValues) as |changeset|}}
         <form {{action "submitVideo" changeset on="submit"}}>
           <p>{{input type="url" value=changeset.videoUrl placeholder="Video URL"}}</p>

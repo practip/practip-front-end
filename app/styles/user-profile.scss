@@ -32,6 +32,20 @@
   &__image {
     width: 15rem;
   }
+
+  &__username {
+    padding: $m-gutter;
+  }
+
+  &__instruments {
+
+    &--icons {
+
+      &__actual {
+        width: 2rem;
+      }
+    }
+  }
 }
 
 .center {

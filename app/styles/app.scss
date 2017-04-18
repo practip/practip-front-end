@@ -36,30 +36,36 @@ $b-primary: 2.5px solid $c-black;
 }
 
 .button {
+  display: block;
   margin: 0.5rem $m-gutter;
   padding: $m-gutter;
+  border: 0;
+  background: none;
+  color: $c-black;
+  font: inherit;
+  font-size: 14px;
   letter-spacing: 4px;
+  text-align: center;
   text-transform: uppercase;
   cursor: pointer;
 
-  &__black {
-    margin: 0.5rem $m-gutter;
-    padding: $m-gutter;
+  &--black {
     background: $c-black;
     color: $c-white;
-    font-size: 12px;
-    letter-spacing: 4px;
-    text-align: center;
-    text-transform: uppercase;
-    cursor: pointer;
+  }
+
+  &--fullwidth {
+    width: calc(100% - #{$m-gutter} - #{$m-gutter});
   }
 }
 
 .text {
+  font-size: 14px;
   letter-spacing: 4px;
   text-transform: uppercase;
 
   &__lowercase {
+    font-size: 14px;
     letter-spacing: 3px;
   }
 
@@ -78,6 +84,7 @@ $b-primary: 2.5px solid $c-black;
 }
 
 .form-box {
+  max-width: 45rem;
   padding: $m-gutter;
   border: $b-primary;
 }
