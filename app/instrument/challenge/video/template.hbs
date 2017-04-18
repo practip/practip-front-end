@@ -21,15 +21,17 @@
             <h1 class="video-title">{{post.title}}</h1>
             <p class="small-text">by <u>User</u> on April 1</p>
             <p class="video-description">{{post.description}}</p>
-            {{#link-to 'instrument.challenge.video.comments' post class="small-text"}}
+            <div class="video__item-bar">
+              <div class="no-margin">
+                {{#link-to 'instrument.challenge.video.edit' post}}
+                <button>Edit</button>
+                {{/link-to}}
+                <button {{action "deletePost" post}}>Delete</button>
+              </div>
+              {{#link-to 'instrument.challenge.video.comments' post class="small-text"}}
               Comments
-            {{/link-to}}
-            <p>
-              {{#link-to 'instrument.challenge.video.edit' post}}
-              <button>Edit</button>
               {{/link-to}}
-              <button {{action "deletePost" post}}>Delete</button>
-            </p>
+            </div>
           </div>
 
         {{else}}
