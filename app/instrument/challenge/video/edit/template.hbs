@@ -1,2 +1,11 @@
-{{#modal-dialog}}
+{{#modal-dialog translucentOverlay=true close="closeModalDialog"}}
+  {{#with (changeset model ChallengeValidations) as |changeset|}}
+    <form {{action "saveEdits" changeset on="submit"}}>
+        {{input type="text" value=changeset.title placeholder="Title"}}
+        {{textarea rows="10" cols="45" value=changeset.description placeholder="Description"}}
+      <div class="button-bar">
+        <button class="button button--black button--fullwidth">submit</button>
+      </div>
+    </form>
+  {{/with}}
 {{/modal-dialog}}
