@@ -1,7 +1,8 @@
 {{#modal-dialog translucentOverlay=true close="closeModalDialog"}}
+  <h3 {{action "closeModalDialog" on="click"}} class="exit">x</h3>
   <div class="section center">
     <h1 class="text__title section">Upload Video</h1>
-    {{#with (changeset formValues) as |changeset|}}
+    {{#with (changeset model formValidations) as |changeset|}}
       <form {{action "submitVideo" changeset on="submit"}}>
         {{input type="url" value=changeset.videoUrl placeholder="URL" class="form"}}
         {{input type="text" value=changeset.title placeholder="Title" class="form"}}

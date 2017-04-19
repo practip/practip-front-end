@@ -1,4 +1,5 @@
 {{#video-modal translucentOverlay=true close="closeModalDialog" container-class=""}}
+  <h3 {{action "closeModalDialog" on="click"}} class="exit">x</h3>
     <div class="comment-modal">
       {{ember-youtube ytid=post.youtubeId width="480" height="360"}}
       <div class="comment-modal__info">
@@ -7,6 +8,11 @@
         <p class="video-description">{{post.description}}</p>
 
         <div class="comment-feed">
+          {{!-- {{#each post.comments as |comment|}}
+          <p class="small-text">{{comment.user}}</p>
+          <p>{{comment.body}}</p>
+          <button {{action "deleteComment" on="submit"}}>Delete</button>
+          {{/each}} --}}
           <div class="comment-feed-box">
             <p class="username">calebjwl</p>
             <p class="comment">This is awesome!</p>
@@ -41,8 +47,12 @@
           </div>
         </div>
 
-        <input type="text" placeholder="Add a comment..." class="comment-input">
-        <button class="button button--black">Submit</button>
+        {{#with (changeset model formValidations) as |formValues|}}
+          <form {{action "submitComment" changeset on="submit"}}>
+            {{input type="text" placeholder="Add a comment..." value=formValues.body class="comment-input"}}
+            <button class="button button--black">Submit</button>
+          </form>
+        {{/with}}
       </div>
     </div>
 {{/video-modal}}
