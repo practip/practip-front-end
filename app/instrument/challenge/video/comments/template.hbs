@@ -41,8 +41,17 @@
           </div>
         </div>
 
-        <input type="text" placeholder="Add a comment..." class="comment-input">
-        <button class="button button--black">Submit</button>
+        {{!-- {{#each post.comments as |comment|}}
+          <p class="small-text">{{comment.user}}</p>
+          <p>{{comment.body}}</p>
+          <button {{action "deleteComment" on="submit"}}>Delete</button>
+        {{/each}} --}}
+        {{#with (changeset model formValidations) as |formValues|}}
+          <form {{action "submitComment" changeset on="submit"}}>
+            {{input type="text" placeholder="Add a comment..." value=formValues.body class="comment-input"}}
+            <button class="button button--black">Submit</button>
+          </form>
+        {{/with}}
       </div>
     </div>
 {{/video-modal}}

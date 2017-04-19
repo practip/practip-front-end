@@ -2,7 +2,7 @@
   <div class="container">
     <div class="form-box center">
       {{#with (changeset model formValidations) as |formValues|}}
-        <form {{action "submitChallenge" formValues on="submit"}}>
+        <form {{action "submitChallenge" changeset on="submit"}}>
           {{input type="text" value=formValues.title class="form" placeholder="Title" changeset=formValues}}
           {{textarea rows="10" value=formValues.description class="form" placeholder="Description" changeset=formValues}}
           <div class="button-bar">
