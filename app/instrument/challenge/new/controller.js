@@ -10,6 +10,8 @@ export default Ember.Controller.extend({
     async submitChallenge(changeset) {
       await changeset.validate().then(() => {
         if(changeset.get('isValid')) {
+          changeset.save();
+
           const challenge = this.store.createRecord('challenge', this.formValues);
           challenge.set('instrument', this.instrument);
 

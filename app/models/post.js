@@ -5,5 +5,7 @@ export default DS.Model.extend({
   description: DS.attr('string'),
   challenge: DS.belongsTo('challenge'),
   videoUrl: DS.attr('string'),
-  youtubeId: DS.attr('string')
+  youtubeId: DS.attr('string'),
+
+  comments: DS.hasMany(),
 });

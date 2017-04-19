@@ -1,7 +1,7 @@
 <div class="section new-challenge">
   <div class="container">
     <div class="form-box center">
-      {{#with (changeset model formValidations) as |changeset|}}
+      {{#with (changeset formValues formValidations) as |changeset|}}
         <form {{action "submitChallenge" changeset on="submit"}}>
           {{input type="text" value=changeset.title class="form" placeholder="Title"}}
           {{textarea rows="10" value=changeset.description class="form" placeholder="Description"}}
