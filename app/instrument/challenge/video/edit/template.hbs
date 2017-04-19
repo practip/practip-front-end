@@ -1,11 +1,18 @@
 {{#modal-dialog translucentOverlay=true close="closeModalDialog"}}
-  {{#with (changeset model ChallengeValidations) as |changeset|}}
-    <form {{action "saveEdits" changeset on="submit"}}>
-        {{input type="text" value=changeset.title placeholder="Title"}}
-        {{textarea rows="10" cols="45" value=changeset.description placeholder="Description"}}
-      <div class="button-bar">
-        <button class="button button--black button--fullwidth">submit</button>
+  <div class="container">
+    <div class="section new-challenge">
+      <div class="container">
+        <h1 class="text__title center">Edit Challenge</h1>
+        {{#with (changeset model formValidations) as |changeset|}}
+          <form {{action "saveEdits" changeset on="submit"}}>
+            {{input type="text" value=changeset.title placeholder="Title" class="form"}}
+            {{textarea rows="10" cols="45" value=changeset.description placeholder="Description" class="form"}}
+            <div class="button-bar">
+              <button class="button button--black button--fullwidth">submit</button>
+            </div>
+          </form>
+        {{/with}}
       </div>
-    </form>
-  {{/with}}
+    </div>
+  </div>
 {{/modal-dialog}}

@@ -1,8 +1,7 @@
 <div class="section new-challenge">
   <div class="container">
     <div class="form-box">
-      {{!-- {{#with (changeset model) as |changeset|}} --}}
-      {{#with (changeset model ChallengeValidations) as |changeset|}}
+      {{#with (changeset model formValidations) as |changeset|}}
         <form {{action "saveEdits" changeset on="submit"}}>
           <div class="section">
             {{input type="text" value=changeset.title class="form" placeholder="Title"}}
@@ -10,6 +9,13 @@
           <div class="section">
             {{textarea rows="10" cols="45" value=changeset.description class="form" placeholder="Description"}}
           </div>
+          {{!-- <ul>
+            {{#each changeset.errors as |errorSet|}}
+            {{#each changeset.validation as |error|}}
+            <li>{{error}}</li>
+            {{/each}}
+            {{/each}}
+          </ul> --}}
           <div class="button-bar">
             {{#link-to 'instrument.challenge' class="button button--black"}}
               back
@@ -20,13 +26,6 @@
       {{/with}}
     </div>
 
-    <ul>
-      {{#each changeset.errors as |errorSet|}}
-        {{#each changeset.validation as |error|}}
-          <li>{{error}}</li>
-        {{/each}}
-      {{/each}}
-    </ul>
 
   </div>
 </div>
