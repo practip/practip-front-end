@@ -27,7 +27,8 @@ $b-primary: 2.5px solid $c-black;
 }
 
 .button-bar {
-  margin: -0.5rem;
+  display: flex;
+  justify-content: center;
 }
 
 .container {

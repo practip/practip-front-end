@@ -1,15 +1,14 @@
 .ember-modal-dialog {
-  width: calc(50% - 4rem);
-  max-width: $m-maxwidth;
-  padding: 2rem;
+  width: calc(100% / 2 - 6rem);
+  // max-width: $m-maxwidth;
 }
 
 .video-modal {
   top: 50%;
   left: 50%;
-  height: 70vh;
   width: 65%;
   min-width: $m-maxwidth;
+  height: 70vh;
   transform: translate(-50%, -50%);
 }
 
