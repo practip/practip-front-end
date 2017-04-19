@@ -33,15 +33,12 @@
           </div>
 
         {{else}}
-        <div class="section">
-          <div class="container">
-            <p class="text">No posts to display. Add a
-              {{#link-to 'instrument.challenge.video.new' class="hvr-underline-from-center"}}
-                new video
-              {{/link-to}}
-              !
-            </p>
-          </div>
+        <div class="grid__item">
+          <p class="text center">No posts to display.
+            {{#link-to 'instrument.challenge.video.new' class="hvr-underline-from-center"}}
+              Add a new video!
+            {{/link-to}}
+          </p>
         </div>
       {{/each}}
     </div>

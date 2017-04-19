@@ -5,10 +5,10 @@
         {{input type="text" value=formValues.title class="form" placeholder="Title"}}
         {{textarea rows="10" value=formValues.description class="form" placeholder="Description"}}
         <div class="button-bar">
-          {{#link-to 'instrument.challenge'}}
-            <div class="button button--black">back</div>
+          {{#link-to 'instrument.challenge' class="button button--black button--fullwidth"}}
+            back
           {{/link-to}}
-          <button class="button button--black">submit</button>
+          <button class="button button--black button--fullwidth">submit</button>
         </div>
       </form>
     </div>
