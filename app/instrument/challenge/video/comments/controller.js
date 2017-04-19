@@ -4,11 +4,18 @@ import formValidations from '../../../../validations/form';
 
 export default Ember.Controller.extend(RedirectOnClose, {
   formValidations,
+  formValues: {},
+  redirectRoute: 'instrument.challenge.video',
 
   actions: {
+    closeModalDialog() {
+      this.transitionToRoute(this.get('redirectRoute'))
+    },
+
     async submitComment() {
       await changeset.validate().then(() => {
         if(changeset.get('isValid')) {
+          changeset.save();
           const comment = this.store.createRecord('comment', this.formValues);
           comment.set('video', this.video);
 

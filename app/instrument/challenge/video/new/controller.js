@@ -1,15 +1,32 @@
 import Ember from 'ember';
 import RedirectOnClose from '../redirect-on-close';
 
+import {
+  validatePresence,
+  validateFormat
+} from 'ember-changeset-validations/validators';
+
+const youtubeVidRegex = /(?:https:\/\/www.youtube.com\/watch\?v=)(.+)/i;
+
 export default Ember.Controller.extend(RedirectOnClose, {
   formValues: {},
+
+  validator: {
+    title: validatePresence(true),
+    videoUrl: [
+      validatePresence(true),
+      validateFormat({ regex: youtubeVidRegex }),
+    ],
+    description: validatePresence(true),
+  },
 
   actions: {
     async submitVideo(changeset) {
       await changeset.validate().then(() => {
         if(changeset.get('isValid')) {
           changeset.save();
-          const [_, youtubeId] = this.formValues.videoUrl.match(/(?:https:\/\/www.youtube.com\/watch\?v=)(.+)/);
+          // debugger;
+          const [_, youtubeId] = this.formValues.videoUrl.match(youtubeVidRegex);
 
           const post = this.store.createRecord('post', this.formValues);
           post.set('youtubeId', youtubeId);
