@@ -1,1 +1,16 @@
-{{outlet}}
+<div class="section">
+  <div class="container">
+    <div class="center">
+      {{#with (changeset model) as |form|}}
+        <form {{action "submit" form on="submit"}} class="login section">
+          {{input type="text" name="your-name" value=form.username size="40" class="form" placeholder="Username"}}
+          {{input type="text" name="your-email" value=form.email size="40" class="form" placeholder="Email"}}
+          {{input type="password" name="your-password" value=form.password size="40" class="form" placeholder="Password"}}
+          <div class="section">
+            <button class="button button--black button--fullwidth">register</button>
+          </div>
+        </form>
+      {{/with}}
+    </div>
+  </div>
+</div>

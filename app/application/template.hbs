@@ -6,12 +6,21 @@
           {{#link-to "instrument"}}Home{{/link-to}}
         </div>
         <ul class="navlist navlist__right">
-          <div class="button hvr-border-fade">
-            {{#link-to "user-profile"}}profile{{/link-to}}
-          </div>
-          <div class="button hvr-border-fade">
-            {{#link-to "login"}}Sign Out{{/link-to}}
-          </div>
+          {{#if session.isAuthenticated}}
+            {{#link-to "user-profile" class="button hvr-border-fade"}}
+              Profile
+            {{/link-to}}
+            <a {{action session.invalidate}} class="button hvr-border-fade">
+              Sign Out
+            </a>
+          {{else}}
+            {{#link-to "login" class="button hvr-border-fade"}}
+              Login
+            {{/link-to}}
+            {{#link-to "login.register" class="button hvr-border-fade"}}
+              Register
+            {{/link-to}}
+          {{/if}}
         </ul>
       </div>
     </div>

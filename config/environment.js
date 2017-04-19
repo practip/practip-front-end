@@ -50,5 +50,9 @@ module.exports = function(environment) {
 
   }
 
+  ENV['ember-simple-auth-token'] = {
+    serverTokenEndpoint: `${ENV.DS.host}/token-auth`,
+  };
+
   return ENV;
 };
