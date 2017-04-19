@@ -8,46 +8,19 @@
         <p class="video-description">{{post.description}}</p>
 
         <div class="comment-feed">
-          {{!-- {{#each post.comments as |comment|}}
-          <p class="small-text">{{comment.user}}</p>
-          <p>{{comment.body}}</p>
-          <button {{action "deleteComment" on="submit"}}>Delete</button>
-          {{/each}} --}}
-          <div class="comment-feed-box">
-            <p class="username">calebjwl</p>
-            <p class="comment">This is awesome!</p>
-          </div>
-          <div class="comment-feed-box">
-            <p class="username">calebjwl</p>
-            <p class="comment">This is awesome!</p>
-          </div>
-          <div class="comment-feed-box">
-            <p class="username">calebjwl</p>
-            <p class="comment">This is awesome!</p>
-          </div>
-          <div class="comment-feed-box">
-            <p class="username">calebjwl</p>
-            <p class="comment">This is awesome!</p>
-          </div>
-          <div class="comment-feed-box">
-            <p class="username">calebjwl</p>
-            <p class="comment">This is awesome!</p>
-          </div>
-          <div class="comment-feed-box">
-            <p class="username">calebjwl</p>
-            <p class="comment">This is awesome!</p>
-          </div>
-          <div class="comment-feed-box">
-            <p class="username">calebjwl</p>
-            <p class="comment">This is awesome!</p>
-          </div>
-          <div class="comment-feed-box">
-            <p class="username">calebjwl</p>
-            <p class="comment">This is awesome!</p>
-          </div>
+          {{#each post.comments as |comment|}}
+            <div class="comment-feed-box">
+              <p>
+                <p class="small-text">calebjwl</p>
+                {{!-- <p class="small-text">{{comment.username}}</p> --}}
+                {{comment.body}}
+              </p>
+              <p class="delete" {{action "deleteComment" comment}}>Delete</p>
+            </div>
+          {{/each}}
         </div>
 
-        {{#with (changeset formValues formValidations) as |changeset|}}
+        {{#with (changeset formValues CommentValidator) as |changeset|}}
           <form {{action "submitComment" changeset on="submit"}}>
             {{input type="text" placeholder="Add a comment..." value=changeset.body class="comment-input"}}
             <button class="button button--black">Submit</button>
