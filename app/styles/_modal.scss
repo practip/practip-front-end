@@ -1,9 +1,11 @@
 .ember-modal-dialog {
+  position: relative;
   width: calc(100% / 2 - 6rem);
   // max-width: $m-maxwidth;
 }
 
 .video-modal {
+  position: relative;
   top: 50%;
   left: 50%;
   width: 65%;
@@ -55,4 +57,13 @@
   margin: 0.2rem 0 0 0;
   color: rgba($c-black, 0.4);
   font-size: 14px;
+}
+
+.exit {
+  position: absolute;
+  top: 0.3rem;
+  right: 1rem;
+  margin: 0;
+  color: rgba($c-black, 0.4);
+  cursor: pointer;
 }

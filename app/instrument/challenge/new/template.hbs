@@ -1,10 +1,10 @@
 <div class="section new-challenge">
   <div class="container">
     <div class="form-box center">
-      {{#with (changeset model formValidations) as |formValues|}}
+      {{#with (changeset model formValidations) as |changeset|}}
         <form {{action "submitChallenge" changeset on="submit"}}>
-          {{input type="text" value=formValues.title class="form" placeholder="Title" changeset=formValues}}
-          {{textarea rows="10" value=formValues.description class="form" placeholder="Description" changeset=formValues}}
+          {{input type="text" value=changeset.title class="form" placeholder="Title"}}
+          {{textarea rows="10" value=changeset.description class="form" placeholder="Description"}}
           <div class="button-bar">
             {{#link-to 'instrument.challenge'}}
               <div class="button button--black">back</div>
