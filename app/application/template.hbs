@@ -7,9 +7,9 @@
         </div>
         <ul class="navlist navlist__right">
           {{#if session.isAuthenticated}}
-            {{#link-to "user-profile" class="button hvr-border-fade"}}
+            {{!-- {{#link-to "user-profile" class="button hvr-border-fade"}}
               Profile
-            {{/link-to}}
+            {{/link-to}} --}}
             <a {{action session.invalidate}} class="button hvr-border-fade">
               Sign Out
             </a>

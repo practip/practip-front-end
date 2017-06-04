@@ -18,10 +18,14 @@
             <div class="card">
               <div class="card__content center section">
                 <h3 class="text__title hvr-underline-from-center">
-                  {{#link-to 'instrument.challenge.video' challenge}}
+                  {{#link-to 'instrument.challenge.video' challenge.id}}
                     {{challenge.title}}
                   {{/link-to}}
                 </h3>
+                {{!-- {{#if currentUser.user}}
+                {{currentUser.user.name}}
+                {{/if}} --}}
+                {{!-- <p class="small-text text__lowercase">by calebjwl</p> --}}
                 <p class="text__lowercase">{{challenge.description}}</p>
               </div>
               <div class="card__footer">

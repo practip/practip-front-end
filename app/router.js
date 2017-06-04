@@ -7,7 +7,7 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('dashboard');
+  this.route('dashboard', { path: '/' });
 
   this.route('instrument', { path: '/instruments' }, function() {
     this.route('challenge', { path: '/:instrument_id' }, function() {
