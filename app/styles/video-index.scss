@@ -8,9 +8,13 @@
   margin: $m-gutter;
   padding: $m-gutter;
   border: $b-primary;
+  position: relative;
+  padding-bottom: 5rem;
 
   &-title {
-    margin: 0;
+    font-size: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
   }
 
   &-description {
@@ -22,5 +26,7 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    position: absolute;
+    bottom: 0;
   }
 }

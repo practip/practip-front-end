@@ -1,7 +1,8 @@
 .ember-modal-dialog {
   position: relative;
   width: calc(100% / 2 - 6rem);
-  // max-width: $m-maxwidth;
+  border-radius: 0;
+  background: rgba($c-white, 0.8);
 }
 
 .video-modal {
@@ -9,8 +10,8 @@
   top: 50%;
   left: 50%;
   width: 65%;
-  min-width: $m-maxwidth;
-  height: 70vh;
+  min-width: $m-maxwidth - 5rem;
+  height: 65vh;
   padding: 1rem;
   transform: translate(-50%, -50%);
 }
@@ -28,7 +29,7 @@
   }
 
   &-feed {
-    height: 35vh;
+    height: 39vh;
     overflow: scroll;
 
     > * + * {
@@ -46,9 +47,14 @@
   }
 
   &-input {
-    width: 70%;
-    margin: 0.4rem;
+    flex-grow: 1;
+    // margin-top: 0.4rem;
     padding: 0.4rem;
+  }
+
+  &-bar {
+    display: flex;
+    margin-top: 0.5rem;
   }
 }
 
@@ -74,5 +80,20 @@
 
 .delete {
   color: rgba($c-black, 0.4);
+  cursor: pointer;
+}
+
+.submit-comment {
+  display: block;
+  margin-left: 0.5rem;
+  padding: $m-gutter;
+  border: 0;
+  background: none;
+  color: $c-black;
+  font: inherit;
+  font-size: 14px;
+  letter-spacing: 4px;
+  text-align: center;
+  text-transform: uppercase;
   cursor: pointer;
 }

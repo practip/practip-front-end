@@ -3,27 +3,31 @@
     <div class="comment-modal">
       {{ember-youtube ytid=post.youtubeId width="480" height="360"}}
       <div class="comment-modal__info">
-        <h1 class="video-title">{{post.title}}</h1>
-        <p class="small-text">by <u>User</u> on April 1</p>
-        <p class="video-description">{{post.description}}</p>
+        <h1 class="text__title video-title">{{post.title}}</h1>
+        {{!-- <p class="small-text">by <u>User</u> on April 1</p> --}}
+        <p class="video-description text__lowercase">{{post.description}}</p>
 
         <div class="comment-feed">
           {{#each post.comments as |comment|}}
             <div class="comment-feed-box">
               <p>
-                <p class="small-text">calebjwl</p>
+                {{!-- {{#if currentUser.user.name}} --}}
+                  {{!-- <p class="small-text">calebjwl</p> --}}
+                {{!-- {{/if}} --}}
                 {{!-- <p class="small-text">{{comment.username}}</p> --}}
                 {{comment.body}}
               </p>
               <p class="delete" {{action "deleteComment" comment}}>Delete</p>
             </div>
+            {{else}}
+            <p class="small-text">No comments</p>
           {{/each}}
         </div>
 
         {{#with (changeset formValues CommentValidator) as |changeset|}}
-          <form {{action "submitComment" changeset on="submit"}}>
+          <form {{action "submitComment" changeset on="submit"}} class="comment-bar">
             {{input type="text" placeholder="Add a comment..." value=changeset.body class="comment-input"}}
-            <button class="button button--black">Submit</button>
+            <button class="submit-comment button--black">Submit</button>
           </form>
         {{/with}}
       </div>
